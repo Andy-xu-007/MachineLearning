@@ -4,6 +4,7 @@ import org.apache.spark.ml.feature.Binarizer
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 // Binarizer / 二值化
+
 object Binarizer {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession

@@ -48,6 +48,18 @@
       <artifactId>spark-sql_2.12</artifactId>
       <version>2.4.4</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming -->
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-streaming_2.12</artifactId>
+      <version>2.4.4</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-graphx -->
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-graphx_2.12</artifactId>
+      <version>2.4.4</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -90,5 +102,24 @@
         </executions>
       </plugin>
     </plugins>
+    <pluginManagement>
+      <plugins>
+        <!-- maven 的打包插件-->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>3.3.0</version>
+          <executions>
+            <execution>
+              <id>make-assembly</id>
+              <phase>package</phase>
+              <goals>
+                <goal>single</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
